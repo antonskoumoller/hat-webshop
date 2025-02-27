@@ -1,8 +1,20 @@
 let hats = [
   {
     name: "Taco Hat",
-    img: "/hat-webshop/images/taco-hat.png",
+    img: "/images/taco-hat.png",
     description: "Beautiful taco hat for parties and stuff",
+    link: "",
+  },
+  {
+    name: "Kaptajn",
+    img: "/images/Kaptajn.jpg",
+    description: "Traditional headpiece for the born sailor",
+    link: "",
+  },
+  {
+    name: "Strawberry",
+    img: "/images/Strawberry.png",
+    description: "cute headpiece with a summer feeling",
     link: "",
   },
 ];
@@ -10,18 +22,20 @@ let hats = [
 let hatcards = hats.map((hat) => {
   // Creating the card div
   let hatCard = document.createElement("div");
-  hatCard.className = "card";
-  hatCard.style.width = "18rem";
+  hatCard.className = "card bg-warning";
+  hatCard.style = "width: 300px";
 
   // Creating the image element
   let img = document.createElement("img");
   img.className = "card-img-top";
+  img.style.height = "200px";
+  img.style.objectFit = "center";
   img.src = hat.img; // Accessing the correct variable
-  img.alt = "Card image cap";
+  img.alt = "Card image";
 
   // Creating the card body div
   let hatBody = document.createElement("div");
-  hatBody.className = "card-body";
+  hatBody.className = "card-body text-center";
 
   // Creating the title element
   let title = document.createElement("h5");
@@ -36,7 +50,7 @@ let hatcards = hats.map((hat) => {
   // Creating the link element
   let link = document.createElement("a");
   link.href = hat.link;
-  link.className = "btn btn-primary";
+  link.className = "btn btn-info";
   link.textContent = "Show hat";
 
   // Appending title, description, and link to card body:
