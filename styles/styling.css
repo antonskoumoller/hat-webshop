@@ -1,2 +1,25 @@
 /* css style sheet for our web shop */
 
+:root {
+    --primary: #79DFC1;
+    --secondary: #FEB272;
+    --dark-primary: #20C997;
+    --light-primary: #D2F4EA;
+    --dark-secondary: #FD7E14;
+    --grey-light: #E9ECEF;
+    --grey: #DEE2E6;
+    --grey-dark: #6C757D;
+  }
+  
+.btn-outline-success {
+    color: var(--primary) !important;
+    border-color: var(--dark-primary) !important;
+    
+}
+
+
+.btn:hover {
+    background-color: var(--light-primary) !important;
+    
+}
+
