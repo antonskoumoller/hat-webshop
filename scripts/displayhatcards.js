@@ -2,21 +2,21 @@ let hats = [
   {
     name: "Taco Hat",
     img: "/hat-webshop/images/taco-hat.png",
-    description: "Beautyfull taco hat for parties and stuff",
+    description: "Beautiful taco hat for parties and stuff",
     link: "",
   },
 ];
 
 let hatcards = hats.map((hat) => {
   // Creating the card div
-  let hat = document.createElement("div");
-  hat.className = "card";
-  hat.style.width = "18rem";
+  let hatCard = document.createElement("div");
+  hatCard.className = "card";
+  hatCard.style.width = "18rem";
 
   // Creating the image element
   let img = document.createElement("img");
   img.className = "card-img-top";
-  img.src = hatdata.img;
+  img.src = hat.img; // Accessing the correct variable
   img.alt = "Card image cap";
 
   // Creating the card body div
@@ -39,21 +39,21 @@ let hatcards = hats.map((hat) => {
   link.className = "btn btn-primary";
   link.textContent = "Show hat";
 
-  // Appending title, description, and link:
+  // Appending title, description, and link to card body:
   hatBody.appendChild(title);
   hatBody.appendChild(description);
   hatBody.appendChild(link);
 
-  // Appending image and card body to card
-  hat.appendChild(img);
-  hat.appendChild(hatBody);
+  // Appending image and card body to the card
+  hatCard.appendChild(img);
+  hatCard.appendChild(hatBody);
 
-  return hat;
+  return hatCard; // Returning the card
 });
 
 let container = document.getElementById("hat-container");
 
 // Appending each card to the container
-hatcards.forEach((hat) => {
-  container.appendChild(hat);
+hatcards.forEach((hatCard) => {
+  container.appendChild(hatCard);
 });
