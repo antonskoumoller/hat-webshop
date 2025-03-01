@@ -9,12 +9,35 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/scripts/LogInFunctionality.js"></script>
     <title>DripHats WebShop</title>
 </head>
 
-<body class="content">
+<script>
+    function log() {
+        let fname = document.getElementById("fullName").value;
+        let email = document.getElementById("email").value;
+        let pw = document.getElementById("password").value;
+        logIn(fname, email, pw);
+    }
+    function checkIfLoggedIn() {
+        console.log(localStorage.getItem("currentUser"))
+        if (localStorage.getItem("currentUser") == "") {
+            document.getElementById("usernameDisplay").innerHTML = "Welcome"
+        } else {
+            let userJSON = localStorage.getItem("currentUser");
+            let user = JSON.parse(userJSON);
+            const name = user.fullname
+            document.getElementById("usernameDisplay").innerHTML = 'Hats off to you, ' + name
+
+        }
+    }
+</script>
+
+<body class="content" onload="checkIfLoggedIn()">
 
     <!--   -->
+
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
@@ -43,7 +66,7 @@
                 </li>
 
                 <li class="nav-item d-flex align-items-center px-2">
-                    <span class="navbar-text mr-2">Username</span>
+                    <span class="navbar-text mr-2" id="usernameDisplay">Username</span>
 
                     <!-- Basket icon: -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -63,17 +86,19 @@
                     <div class="dropdown-menu dropdown-menu-right p-2">
                         <div class="form-group">
                             <label for="fullName">Full name</label>
-                            <input type="email" class="form-control" id="nameReq" placeholder="Jane Doe">
+                            <input type="fullname" class="form-control" id="fullName" placeholder="Jane Doe" value="">
                         </div>
                         <div class="form-group">
                             <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="emailReq" placeholder="email@example.com">
+                            <input type="email" class="form-control" id="email" placeholder="email@example.com"
+                                value="">
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="passwordReq" placeholder="Password">
+                            <input type="password" class="form-control" id="password" placeholder="Password" value="">
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+                        <button type="submit" class="btn btn-primary" onclick="log(); checkIfLoggedIn()">Sign
+                            in</button>
                     </div>
                 </li>
             </ul>
@@ -95,6 +120,7 @@
         <span>hat2</span>
         <span>hat3</span>
     </div>
+
 
 </body>
 
