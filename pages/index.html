@@ -14,24 +14,7 @@
 </head>
 
 <script>
-    function log() {
-        let fname = document.getElementById("fullName").value;
-        let email = document.getElementById("email").value;
-        let pw = document.getElementById("password").value;
-        logIn(fname, email, pw);
-    }
-    function checkIfLoggedIn() {
-        console.log(localStorage.getItem("currentUser"))
-        if (localStorage.getItem("currentUser") == "") {
-            document.getElementById("usernameDisplay").innerHTML = "Welcome"
-        } else {
-            let userJSON = localStorage.getItem("currentUser");
-            let user = JSON.parse(userJSON);
-            const name = user.fullname
-            document.getElementById("usernameDisplay").innerHTML = 'Hats off to you, ' + name
 
-        }
-    }
 </script>
 
 <body class="content" onload="checkIfLoggedIn()">
@@ -97,7 +80,7 @@
                             <label for="password">Password</label>
                             <input type="password" class="form-control" id="password" placeholder="Password" value="">
                         </div>
-                        <button type="submit" class="btn btn-primary" onclick="log(); checkIfLoggedIn()">Sign
+                        <button type="submit" class="btn btn-primary" onclick="log(); checkIfLoggedIn();">Sign
                             in</button>
                     </div>
                 </li>
