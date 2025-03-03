@@ -11,6 +11,7 @@ function loadHats() {
           "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
         category: "Fun",
         popular: false,
+        price: 500,
       },
       {
         id: 2,
@@ -21,6 +22,8 @@ function loadHats() {
           "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
         category: "Outdoor",
         popular: false,
+        price: 500,
+
       },
       {
         id: 3,
@@ -31,6 +34,8 @@ function loadHats() {
           "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
         category: "Kids",
         popular: false,
+        price: 500,
+
       },
       {
         id: 4,
@@ -42,6 +47,8 @@ function loadHats() {
           "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
         category: "Classic",
         popular: false,
+        price: 500,
+
       },
       {
         id: 5,
@@ -53,6 +60,8 @@ function loadHats() {
           "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
         category: "Classic",
         popular: false,
+        price: 500,
+
       },
       {
         id: 6,
@@ -64,6 +73,8 @@ function loadHats() {
           "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
         category: "Outdoor",
         popular: false,
+        price: 500,
+
       },
       {
         id: 7,
@@ -74,6 +85,8 @@ function loadHats() {
           "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
         category: "Fun",
         popular: false,
+        price: 500,
+
       },
     ];
 
