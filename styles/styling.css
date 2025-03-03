@@ -82,7 +82,8 @@ h1 {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
   color: var(--dark-primary) !important;
 }
-.container {
+/*Just used for the only caroussel container for now*/
+#carousel1 {
   border-color: var(--dark-primary) !important;
   border-radius: 5px;
 }
