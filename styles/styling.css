@@ -11,6 +11,8 @@
   --grey-dark: #6c757d;
 }
 
+/* Styling buttons */
+
 .btn-outline-success {
   color: var(--primary) !important;
   border-color: var(--dark-primary) !important;
@@ -20,11 +22,34 @@
   background-color: var(--light-primary) !important;
 }
 
-/* Styling for cards */
+/* Styling cards */
 
-.border-dark-primary {
-  border: 2px solid var(--dark-primary) !important;
+.card-outline {
+  color: var(--primary) !important;
+  border-color: var(--dark-primary) !important;
+  border: 1px solid;
 }
+
+.card-img-top {
+  width: 100%; /* Ensures images stretch to full card width */
+  height: 250px; /* Set a fixed height */
+  object-fit: contain;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Styling paragraphs */
 
 h1,
 h2,
@@ -43,6 +68,8 @@ p {
 h1 {
   color: var(--dark-primary);
 }
+
+/* Styling navbar */
 
 .nav-item .nav-link {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

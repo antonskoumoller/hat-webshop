@@ -4,14 +4,13 @@ let hatList = JSON.parse(localStorage.getItem("allHats"));
 let hatcards = hatList.map((hat) => {
   // Card-sizing wrapper
   let cardSize = document.createElement("div");
-  cardSize.className = "col-sm-6 mb-3 mb-sm-0";
+  cardSize.className = "col-sm-6 mb-3";
+  cardSize.className = "col-sm-6 mb-3";
 
   // Creating the card div
   let hatCard = document.createElement("div");
-  hatCard.className = "card border-success mb-3"; // skal ændres til costumized colour: border-dark-primary
-  hatCard.style.width = "18rem";
-
-  // hatCard.style.height = "18rem";
+  hatCard.className = "card card-outline";
+  hatCard.className = "card card-outline";
 
   // Creating the image element
   let img = document.createElement("img");
@@ -22,9 +21,6 @@ let hatcards = hatList.map((hat) => {
   // Creating the card body div
   let hatBody = document.createElement("div");
   hatBody.className = "card-body";
-  hatBody.style.display = "flex";
-  hatBody.style.flexDirection = "column";
-  hatBody.style.justifyContent = "space-between";
 
   // Creating the title element
   let title = document.createElement("h5");
@@ -39,8 +35,8 @@ let hatcards = hatList.map((hat) => {
   // Creating the link element
 
   let link = document.createElement("a");
-  link.href = hat.link;
-  link.className = "btn btn-info"; // -dark-primary
+  link.href = `/pages/product-page.html?id=${hat.id}`;
+  link.className = "btn btn-outline-success";
   link.textContent = "Show hat";
 
   // Appending elements (title, description and link) to the card body
@@ -59,7 +55,7 @@ let hatcards = hatList.map((hat) => {
 });
 
 let container = document.getElementById("hat-container");
-container.className = "row";
+container.className = "row row-cols-1 row-cols-sm-2 row-cols-md-4";
 
 // Appending each cardSize div to the container
 hatcards.forEach((hatCard) => {
