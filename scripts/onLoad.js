@@ -61,7 +61,7 @@ let allHats = [
 ]
 
 generateHatStorage();
-resetHatStorage();
+//resetHatStorage();
 
 
 function generateHatStorage(){

@@ -40,6 +40,7 @@ function removeFromBasket(hatIDExp){
         return hat.id!=hatIDExp; 
     })
     setBasket(newBasket);
+    location.reload();
 }
 
 function getHatStorage() { // Returns an array containing all hat objects on website
