@@ -10,6 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/scripts/LogInFunctionality.js"></script>
+    <script src="/scripts/basketScript.js"></script>
+
     <title>DripHats WebShop</title>
 </head>
 
@@ -40,7 +42,10 @@
                         </h4>
                     </div>
 
-                    <button class="btn btn-outline-success btn-lg w-100 mt-auto">Add to Cart</button>
+                    <button class="btn btn-outline-success btn-lg w-100 mt-auto"
+                        onclick="addToBasket(new URLSearchParams(window.location.search).get('id'))">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
         </div>
