@@ -39,7 +39,7 @@ let hatcards = hatList.map((hat) => {
   // Creating the link element
 
   let link = document.createElement("a");
-  link.href = hat.link;
+  link.href = `/pages/product-page.html?id=${hat.id}`;
   link.className = "btn btn-info"; // -dark-primary
   link.textContent = "Show hat";
 
