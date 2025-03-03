@@ -5,9 +5,11 @@ let hatcards = hatList.map((hat) => {
   // Card-sizing wrapper
   let cardSize = document.createElement("div");
   cardSize.className = "col-sm-6 mb-3";
+  cardSize.className = "col-sm-6 mb-3";
 
   // Creating the card div
   let hatCard = document.createElement("div");
+  hatCard.className = "card card-outline";
   hatCard.className = "card card-outline";
 
   // Creating the image element
