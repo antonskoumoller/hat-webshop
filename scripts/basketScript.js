@@ -1,5 +1,16 @@
+generateBasket();
+//resetBasket();
+//testBasket();
+
+
+
+function resetBasket(){ // Sets basket to an empty array
+    localStorage.setItem("basket", JSON.stringify([]));
+}
+
+
 function generateBasket(){ // Checks if there is currently a basket in localstorage, if not it adds an empty basket
-    if (localStorage.getItem("basket")==null){
+    if (localStorage.getItem("basket")==null || localStorage.getItem("basket") == undefined ){
         localStorage.setItem("basket", JSON.stringify([]));
     }
 }
@@ -14,12 +25,21 @@ function setBasket(newBasket){ // @param is a JS-object representing the basket,
 }
 
 function addToBasket(hatIDExp){ // @param is the ID of the hat to be added to basket
-    
+    generateBasket();
     let localBasket = getBasketClone(); // Creates local clone of current basket
-    localBasket.push(allHats.find(function(hat) { // Adds the hat with the given param as ID to the basket
-        return hat.hatid==hatIDExp; 
+    localBasket.push(getHatStorage().find(function(hat) { // Adds the hat with the given param as ID to the basket
+        return hat.id==hatIDExp; 
     }))
     setBasket(localBasket);// Sets basket in localstorage to new basket with added hat-item
+}
+
+function removeFromBasket(hatIDExp){
+    generateBasket();
+    let localBasket = getBasketClone(); // Creates local clone of current basket
+    let newBasket = localBasket.filter(function(hat) { // Creates new array with hat filtered out
+        return hat.id!=hatIDExp; 
+    })
+    setBasket(newBasket);
 }
 
 function getHatStorage() { // Returns an array containing all hat objects on website
@@ -84,5 +104,41 @@ function generateBasketCards() {
     }
     
 }
+
+function testBasket() {
+    let hat1 =  {
+        id: "5",
+        name: "Victorian Tophat",
+        img: "/images/VictorianTophat.png",
+        description:
+          "A tall, elegant hat with a flat crown, popular in the 19th century.",
+        category: "Classic",
+        link: "",
+      }
+    let hat2 = {
+        id: "6",
+        name: "Adventure Hat",
+        img: "/images/AdventureHat.png",
+        description:
+          "A tall, elegant hat with a flat crown, popular in the 19th century.",
+        category: "Outdoor",
+        link: "",
+      }
+
+    let hat3 = {
+        id: "1",
+        name: "Taco Hat",
+        img: "/images/taco-hat.png",
+        description: "Beautiful taco hat for parties and stuff",
+        category: "Fun",
+        link: "",
+      }
+    addToBasket(hat1.id);
+    addToBasket(hat2.id);
+    addToBasket(hat3.id);
+    removeFromBasket(hat2.id);
+    
+}
+
 
 
