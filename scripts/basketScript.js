@@ -1,53 +1,40 @@
-let basket = [{
-    hatid: "1",
-  name: "Taco Hat",
-  img: "/images/taco-hat.png",
-  description: "Beautiful taco hat for parties and stuff",
-  link: "",
-},];
-let hats = [
-    {
-        hatid: "1",
-      name: "Taco Hat",
-      img: "/images/taco-hat.png",
-      description: "Beautiful taco hat for parties and stuff",
-      link: "",
-    },
-  ];
-localStorage.setItem("allHats", JSON.stringify(hats));
-localStorage.setItem("basket", JSON.stringify(basket));
-
-let allHats = JSON.parse(localStorage.getItem("allHats"));
-let userBasket = JSON.parse(localStorage.getItem("basket"));
-
-function addToBasket(hatIDExp) {
+function generateBasket(){ // Checks if there is currently a basket in localstorage, if not it adds an empty basket
     if (localStorage.getItem("basket")==null){
         localStorage.setItem("basket", JSON.stringify([]));
     }
-    let localBasket = JSON.parse(localStorage.getItem("basket"));
-    localBasket.push(allHats.find(function(hat) {
-        return hat.hatid==hatIDExp;
-    }))
-    localStorage.setItem("basket", JSON.stringify(localBasket));
-    userBasket=localBasket;
 }
 
-function removeFromBasket(hatIDExp) {
-    let localBasket=JSON.parse(localStorage.getItem("basket"));
-    let temp = localBasket.filter(function(hat) {
-        return hat.hatid != hatIDExp;
-    });
-    localStorage.setItem("basket", JSON.stringify(temp));
-    userBasket=localBasket;
+function getBasketClone(){ // Returns a JS-array representing the basket, either empty or with hats
+    generateBasket(); // generates empty basket if not made yet
+    return JSON.parse(localStorage.getItem("basket"));
+}
+
+function setBasket(newBasket){ // @param is a JS-object representing the basket, adds the param as the new basket in local storage
+    localStorage.setItem("basket", JSON.stringify(newBasket));
+}
+
+function addToBasket(hatIDExp){ // @param is the ID of the hat to be added to basket
+    
+    let localBasket = getBasketClone(); // Creates local clone of current basket
+    localBasket.push(allHats.find(function(hat) { // Adds the hat with the given param as ID to the basket
+        return hat.hatid==hatIDExp; 
+    }))
+    setBasket(localBasket);// Sets basket in localstorage to new basket with added hat-item
+}
+
+function getHatStorage() { // Returns an array containing all hat objects on website
+    return JSON.parse(localStorage.getItem("allHats"))
+    
 }
 
 function generateBasketCards() {
     let container = document.getElementById("basket-container");
-    if (basket.length==0) {
+    let localBasket = getBasketClone();
+    if (localBasket.length==0) {
         container.innerHTML = "Your basket is currently empty. Visit the shop to buy the best hats in the world!"
         
     } else {
-        let hatcards = basket.map((hat) => {
+        let hatcards = localBasket.map((hat) => {
             // Creating the card div
             let hatCard = document.createElement("div");
             hatCard.className = "card";
@@ -97,3 +84,5 @@ function generateBasketCards() {
     }
     
 }
+
+
