@@ -1,60 +1,7 @@
-// Array with hat objects
-let hats = [
-  {
-    name: "Taco Hat",
-    img: "/images/taco-hat.png",
-    description: "Beautiful taco hat for parties and stuff",
-    category: "Fun",
-    link: "",
-  },
-  {
-    name: "Kaptajn",
-    img: "/images/Kaptajn.jpg",
-    description: "Traditional headpiece for the born sailor",
-    category: "Outdoor",
-    link: "",
-  },
-  {
-    name: "Strawberry",
-    img: "/images/Strawberry.png",
-    description: "Cute headpiece with a summer feeling",
-    category: "Kids",
-    link: "",
-  },
-  {
-    name: "Sixpence Cap",
-    img: "/images/SixPence.png",
-    description:
-      "A classic flat cap with a rounded crown, often worn in British working-class fashion.",
-    category: "Classic",
-    link: "",
-  },
-  {
-    name: "Victorian Tophat",
-    img: "/images/VictorianTophat.png",
-    description:
-      "A tall, elegant hat with a flat crown, popular in the 19th century.",
-    category: "Classic",
-    link: "",
-  },
-  {
-    name: "Adventure Hat",
-    img: "/images/AdventureHat.png",
-    description:
-      "A tall, elegant hat with a flat crown, popular in the 19th century.",
-    category: "Outdoor",
-    link: "",
-  },
-  {
-    name: "Emoji Hat",
-    img: "/images/ShitHat.png",
-    description: "When lifes gives you...",
-    category: "Fun",
-    link: "",
-  },
-];
+// function displayCards(hatList) {
 
-let hatcards = hats.map((hat) => {
+let hatList = JSON.parse(localStorage.getItem("allHats"));
+let hatcards = hatList.map((hat) => {
   // Card-sizing wrapper
   let cardSize = document.createElement("div");
   cardSize.className = "col-sm-6 mb-3 mb-sm-0";
@@ -90,6 +37,7 @@ let hatcards = hats.map((hat) => {
   description.textContent = hat.description;
 
   // Creating the link element
+
   let link = document.createElement("a");
   link.href = hat.link;
   link.className = "btn btn-info"; // -dark-primary
@@ -114,6 +62,7 @@ let container = document.getElementById("hat-container");
 container.className = "row";
 
 // Appending each cardSize div to the container
-hatcards.forEach((cardSize) => {
-  container.appendChild(cardSize);
+hatcards.forEach((hatCard) => {
+  container.appendChild(hatCard);
 });
+// }
