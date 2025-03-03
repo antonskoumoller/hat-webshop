@@ -10,11 +10,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/scripts/LogInFunctionality.js"></script>
-    <script>src = "/scripts/basketScript.js"</script>
+    <script src="/scripts/basketScript.js"></script>
     <title>DripHats WebShop</title>
 </head>
 
-<body class="content" onload="checkIfLoggedIn(); generateBasketCards(basket);">
+<body class="content" onload="checkIfLoggedIn(); generateBasketCards();">
 
     <!--   -->
 
@@ -86,10 +86,10 @@
 
         </div>
     </nav>
-
-    <div id="basket"></div>
-
-
+    <div class="container-fluid">
+        <h1>Items in your basket</h1>
+        <div id="basket-container"></div>
+    </div>
 
 </body>
 
