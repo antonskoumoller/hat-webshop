@@ -17,10 +17,65 @@
 
 <body onload="loadHats(); checkIfLoggedIn()">
 
-    <body class="content" onload="checkIfLoggedIn()">
-        <div id="navbar"></div>
+    <div id="navbar"></div>
 
         <script src="/components/navbar.js"></script>
-    </body>
 
+    <!-- all of caroussel put in container spanning 100 % width (bs4 basic construct) -->
+    <div class="container border w-50">
+        <h2>Popular Items</h2>
+        <!-- caroussel set to be 50 % width of parent container -->
+        <div>
+            <!-- the caroussel itself -->
+            <div id="popular-items-caroussel" class="carousel slide" data-ride="carousel">
+                <!-- indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  </ol>
+                  <!-- the slides (each item is a row of 3 equal size elements (see bs4 grid system)) -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <!-- as of now images (set to be responsive with img-fluid (width 100%, height auto) to avoid size-overflow) -->
+                            <img src="/images/taco-hat.png" class="img-fluid" alt="Hat 1">
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="/images/denmark_hat.jpg" class="img-fluid" alt="Hat 2">
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="/images/knitted_hat.jpg" class="img-fluid" alt="Hat 3">
+                        </div>
+                    </div>   
+                  </div>
+        
+                  <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="/images/sunday-afternoons-havana-hat-hat.jpg" class="img-fluid" alt="Hat 4">
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="/images/Trespass-Classified-Hat-2-scaled-1.jpg" class="img-fluid" alt="Hat 5">
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="/images/victoriantophat.jpg" class="img-fluid" alt="Hat 6">
+                        </div>
+                    </div>   
+                  </div>
+                </div>
+                <!-- the controls for the caroussel -->
+                <a class="carousel-control-prev" href="#popular-items-caroussel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#popular-items-caroussel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+  </body>
 </html>
