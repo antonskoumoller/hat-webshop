@@ -15,7 +15,7 @@
     <title>DripHats WebShop</title>
   </head>
 
-  <body>
+  <body class="content">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">
         <img src="/images/drippin-hats-logo.png" width="50" width="50" />
@@ -138,7 +138,15 @@
         </ul>
       </div>
     </nav>
-    <div id="hat-container"></div>
-    <script src="/scripts/displayhatcards.js"></script>
+
+    <div class="container">
+      <div id="hat-container">
+        <h1 id="hatName">Title</h1>
+        <img id="hatImage" />
+        <p id="hatDescription">description</p>
+      </div>
+      <button class="btn btn-primary">Add to Cart</button>
+    </div>
+    <script src="/scripts/displayProduct.js"></script>
   </body>
 </html>
