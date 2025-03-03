@@ -57,8 +57,13 @@ h3,
 h4,
 p {
   font-family: system-ui, Roboto;
-  color: var(--grey-dark);
+  color: var(--grey-dark) !important;
 }
+
+.text-success {
+    color: var(--dark-primary) !important;
+}
+
 
 h1 {
   color: var(--dark-primary);
@@ -77,3 +82,6 @@ h1 {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
   color: var(--dark-primary) !important;
 }
+
+
+
