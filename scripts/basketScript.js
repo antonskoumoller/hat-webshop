@@ -1,7 +1,7 @@
 let basket = [{
     hatid: "1",
   name: "Taco Hat",
-  img: "/hat-webshop/images/taco-hat.png",
+  img: "/images/taco-hat.png",
   description: "Beautiful taco hat for parties and stuff",
   link: "",
 },];
@@ -9,7 +9,7 @@ let hats = [
     {
         hatid: "1",
       name: "Taco Hat",
-      img: "/hat-webshop/images/taco-hat.png",
+      img: "/images/taco-hat.png",
       description: "Beautiful taco hat for parties and stuff",
       link: "",
     },
