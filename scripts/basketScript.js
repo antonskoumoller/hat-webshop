@@ -29,27 +29,47 @@ function setBasket(newBasket) {
 }
 
 function addToBasket(hatIDExp) {
-  // @param is the ID of the hat to be added to basket
   generateBasket();
-  let localBasket = getBasketClone(); // Creates local clone of current basket
-  localBasket.push(
-    getHatStorage().find(function (hat) {
-      // Adds the hat with the given param as ID to the basket
-      return hat.id == hatIDExp;
-    })
-  );
-  setBasket(localBasket); // Sets basket in localstorage to new basket with added hat-item
+  // Creates local clone of current basket
+  let localBasket = getBasketClone();
+
+  let hat = getHatStorage().find(function (hat) {
+    return hat.id == hatIDExp;
+  });
+
+  let basketItem = localBasket.find(function (item) {
+    return item.hat.id == hatIDExp;
+  });
+
+  //check if the hat is already in the basket, and increment amount
+  if (basketItem) {
+    basketItem.amount += 1;
+  } else {
+    localBasket.push({ hat: hat, amount: 1 });
+  }
+
+  // Sets basket in localstorage to new basket with added hat-item
+  setBasket(localBasket);
+  generateBasketCards();
 }
 
 function removeFromBasket(hatIDExp) {
   generateBasket();
-  let localBasket = getBasketClone(); // Creates local clone of current basket
-  let newBasket = localBasket.filter(function (hat) {
-    // Creates new array with hat filtered out
-    return hat.id != hatIDExp;
+  // Creates local clone of current basket
+  let localBasket = getBasketClone();
+  let hat = localBasket.find(function (item) {
+    return item.hat.id == hatIDExp;
   });
-  setBasket(newBasket);
-  location.reload();
+
+  // Removes hat from basket if amount is 1, otherwise decrements amount
+  if (hat.amount > 1) {
+    hat.amount -= 1;
+  } else {
+    localBasket = localBasket.filter((item) => item.hat.id != hatIDExp);
+  }
+
+  setBasket(localBasket);
+  generateBasketCards();
 }
 
 function getHatStorage() {
@@ -64,35 +84,41 @@ function generateBasketCards() {
     container.innerHTML =
       "Your basket is currently empty. Visit the shop to buy the best hats in the world!";
   } else {
-    let hatList = localBasket.map((hat) => {
+    container.innerHTML = "";
+    let hatList = localBasket.map((item) => {
       let hatItem = document.createElement("li");
       hatItem.className = "basketItem";
       hatItem.innerHTML = `
         <div class="container-basketItems row">
           <div class="hatAttributes col-md-8">
-                <img src="${hat.img}"></img>
-                <p>${hat.description}</p>
+                <img src="${item.hat.img}"></img>
+                <p>${item.hat.description}</p>
           </div>
 
           <div class="priceAttributes col-md-4">
             <div class="row">
               <div class="col-md-8" style="display: flex; flex-direction: column;">
-                <p>Amount</p>
+                <h2  class="h2-margin-bottom">Amount</h2>
                 <div style="display: flex; flex-direction: row;">
-                  <button type="button" class="btn btn-outline-success">-</button>
-                  <p id="item-amount">1,2,3</p>
-                  <button type="button" class="btn btn-outline-success">+</button>
+                  <button type="button" class="btn btn-outline-success" onclick="removeFromBasket('${
+                    item.hat.id
+                  }')">-</button>
+                  <p id="item-amount">${item.amount}</p>
+                  <button type="button" class="btn btn-outline-success" onclick="addToBasket('${
+                    item.hat.id
+                  }')">+</button>
                 </div>
               </div>
               <div class="col-md-4">
-                <p>Price</p>
+                <h2 class="h2-margin-bottom">Price</h2>
+                <p>${item.hat.price * item.amount} kr</p>
               </div>
             </div>
           </div>
         </div>`;
       return hatItem;
     });
-    list = document.createElement("ul");
+    let list = document.createElement("ul");
     list.className = "list-group";
 
     hatList.forEach((hat) => {
