@@ -35,7 +35,7 @@ let hatcards = hatList.map((hat) => {
   // Creating the link element
 
   let link = document.createElement("a");
-  link.href = `/pages/product-page.html?id=${hat.id}`;
+  link.href = `/pages/product-page2.html?id=${hat.id}`;
   link.className = "btn btn-outline-success";
   link.textContent = "Show hat";
 

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Insert the entire navbar into the #navbar div
-    document.getElementById("navbar").innerHTML = `
+  // Insert the entire navbar into the #navbar div
+  document.getElementById("navbar").innerHTML = `
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
                 <img src="/images/drippin-hats-logo.png" width="50" height="50">
@@ -60,19 +60,19 @@ document.addEventListener("DOMContentLoaded", function () {
         </nav>
     `;
 
-    // **Step 2: Highlight Active Page**
-    highlightActiveNav();
+  // **Step 2: Highlight Active Page**
+  highlightActiveNav();
 });
 
 // Function to highlight the active page
 function highlightActiveNav() {
-    const currentPage = window.location.pathname.split("/").pop(); // Get current filename
+  const currentPage = window.location.pathname.split("/").pop(); // Get current filename
 
-    document.querySelectorAll(".nav-link").forEach(link => {
-        if (link.getAttribute("href").includes(currentPage)) {
-            link.parentElement.classList.add("active"); // Add active class to <li>
-        } else {
-            link.parentElement.classList.remove("active"); // Ensure others are not active
-        }
-    });
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    if (link.getAttribute("href").includes(currentPage)) {
+      link.parentElement.classList.add("active"); // Add active class to <li>
+    } else {
+      link.parentElement.classList.remove("active"); // Ensure others are not active
+    }
+  });
 }
