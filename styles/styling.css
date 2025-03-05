@@ -61,9 +61,8 @@ p {
 }
 
 .text-success {
-    color: var(--dark-primary) !important;
+  color: var(--dark-primary) !important;
 }
-
 
 h1 {
   color: var(--dark-primary);
@@ -102,4 +101,60 @@ h1 {
 /* Push the button to the bottom of the card */
 #popular-items-caroussel .carousel-item .card .btn {
   margin-top: auto; /* This ensures that the button stays at the bottom */
+}
+
+/* styling for items in basket */
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+.container-basketItem {
+  margin: 5px;
+  display: flex;
+}
+.hatAttributes {
+  border-bottom: 1px solid var(--dark-primary) !important;
+  margin: 5px;
+  flex: 2;
+}
+.priceAttributes {
+  border-bottom: 1px solid var(--dark-primary) !important;
+  margin: 5px;
+  flex: 1;
+}
+#basket-container {
+  padding: 20px;
+}
+ul {
+  list-style-type: none;
+}
+h1 {
+  text-align: center;
+  margin: 20px;
+  text-decoration: underline;
+  text-decoration-color: var(--dark-primary);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+.row {
+  display: flex;
+  margin-top: 20px;
+  button {
+    margin: 5px;
+  }
+  #item-amount {
+    margin-top: auto;
+  }
+}
+#button-div {
+  display: flex;
+  margin-bottom: 10px;
+  #button1 {
+    flex: 2;
+    margin: 5px;
+  }
+  #button2 {
+    flex: 1;
+    margin: 5px;
+  }
 }
