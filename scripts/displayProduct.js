@@ -1,4 +1,3 @@
-
 // takes ID from URL:
 let urlParams = new URLSearchParams(window.location.search);
 let hatId = parseInt(urlParams.get("id"));
@@ -15,4 +14,3 @@ document.getElementById("hatName").textContent = hat.name;
 document.getElementById("hatImage").src = hat.img;
 //sets fullDescription;
 document.getElementById("hatDescription").textContent = hat.fullDescription;
-

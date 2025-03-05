@@ -23,7 +23,6 @@ function loadHats() {
         category: "Outdoor",
         popular: true,
         price: 500,
-
       },
       {
         id: 3,
@@ -35,7 +34,6 @@ function loadHats() {
         category: "Kids",
         popular: true,
         price: 500,
-
       },
       {
         id: 4,
@@ -48,7 +46,6 @@ function loadHats() {
         category: "Classic",
         popular: true,
         price: 500,
-
       },
       {
         id: 5,
@@ -61,7 +58,6 @@ function loadHats() {
         category: "Classic",
         popular: true,
         price: 500,
-
       },
       {
         id: 6,
@@ -74,7 +70,6 @@ function loadHats() {
         category: "Outdoor",
         popular: true,
         price: 500,
-
       },
       {
         id: 7,
@@ -86,7 +81,6 @@ function loadHats() {
         category: "Fun",
         popular: false,
         price: 500,
-
       },
     ];
 
