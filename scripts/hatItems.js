@@ -140,7 +140,7 @@ function loadHats() {
       {
         id: 13,
         name: "Graduation hat",
-        img: "/images/graduation-hat.jpg",
+        img: "/images/graduation-hat.png",
         description: "Show of your knowledge with this hat on your head",
         fullDescription:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -163,7 +163,7 @@ function loadHats() {
       {
         id: 15,
         name: "Windy hat",
-        img: "/images/windy-hat.jpg",
+        img: "/images/windy-hat.png",
         description:
           "A hat that is perfect for windy days. It will not fly off your head. Probably, we have not tested it.",
         fullDescription:
