@@ -7,6 +7,7 @@ let hatcards = hatList.map((hat) => {
   cardSize.className = "col-sm-6 mb-3";
   cardSize.className = "col-sm-6 mb-3";
   cardSize.setAttribute("category", hat.category);
+  cardSize.setAttribute("brand", hat.brand);
 
   // Creating the card div
   let hatCard = document.createElement("div");
@@ -83,6 +84,25 @@ function filteredView(category) {
   } else {
     for (let index = 0; index < containerChildren.length; index++) {
       if (containerChildren[index].getAttribute("category") == category) {
+        containerChildren[index].className = "col-sm-6 mb-3";
+      } else {
+        containerChildren[index].className = "d-none";
+      }
+    }
+  }
+}
+function filteredViewBrand(brand) {
+  //let hatList = JSON.parse(localStorage.getItem("allHats"));
+  let container = document.getElementById("hat-container");
+  let containerChildren = container.children;
+
+  if (brand == "allHats") {
+    for (let index = 0; index < containerChildren.length; index++) {
+      containerChildren[index].className = "col-sm-6 mb-3";
+    }
+  } else {
+    for (let index = 0; index < containerChildren.length; index++) {
+      if (containerChildren[index].getAttribute("brand") == brand) {
         containerChildren[index].className = "col-sm-6 mb-3";
       } else {
         containerChildren[index].className = "d-none";

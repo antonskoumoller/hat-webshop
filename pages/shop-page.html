@@ -19,23 +19,51 @@
   <div id="navbar"></div>
   <div class="w-50 m-3"> <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off"
       checked>
-    <label class="btn btn-outline-success" for="option5" onclick="filteredView('allHats')">All hats</label>
+    <div class="container"><label class="btn btn-outline-success" for="option5" onclick="filteredView('allHats')">All
+        hats</label></div>
 
-    <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
-    <label class="btn btn-outline-success" for="option6" onclick="filteredView('Classic')">Classic</label>
 
-    <input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off">
-    <label class="btn btn-outline-success" for="option7" onclick="filteredView('Outdoor')">Outdoor</label>
+    <div class="d-flex gap-5">
+      <div class="container">
+        <h4>Filter by type</h4>
+        <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+        <label class="btn btn-outline-success" for="option6" onclick="filteredView('Classic')">Classic</label>
 
-    <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
-    <label class="btn btn-outline-success" for="option8" onclick="filteredView('Kids')">Kids</label>
+        <input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off">
+        <label class="btn btn-outline-success" for="option7" onclick="filteredView('Outdoor')">Outdoor</label>
 
-    <input type="radio" class="btn-check" name="options-base" id="option9" autocomplete="off">
-    <label class="btn btn-outline-success" for="option9" onclick="filteredView('Fun')">Fun</label>
+        <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+        <label class="btn btn-outline-success" for="option8" onclick="filteredView('Kids')">Kids</label>
 
-    <input type="radio" class="btn-check" name="options-base" id="option10" autocomplete="off">
-    <label class="btn btn-outline-success" for="option10" onclick="filteredView('Fashion')">Fashion</label>
+        <input type="radio" class="btn-check" name="options-base" id="option9" autocomplete="off">
+        <label class="btn btn-outline-success" for="option9" onclick="filteredView('Fun')">Fun</label>
+
+        <input type="radio" class="btn-check" name="options-base" id="option10" autocomplete="off">
+        <label class="btn btn-outline-success" for="option10" onclick="filteredView('Fashion')">Fashion</label>
+      </div>
+
+
+
+
+      <div class="container">
+        <h4>Filter by brand </h4>
+        <input type="radio" class="btn-check" name="options-base" id="option11" autocomplete="off">
+        <label class="btn btn-outline-success" for="option11" onclick="filteredViewBrand('Gucci')">Gucci</label>
+
+        <input type="radio" class="btn-check" name="options-base" id="option12" autocomplete="off">
+        <label class="btn btn-outline-success" for="option12" onclick="filteredViewBrand('Prada')">Prada</label>
+
+        <input type="radio" class="btn-check" name="options-base" id="option13" autocomplete="off">
+        <label class="btn btn-outline-success" for="option13" onclick="filteredViewBrand('Von Dutch')">Von Dutch</label>
+
+      </div>
+
+    </div>
+
+
+
   </div>
+
   <div id="hat-container" class="container border w-50 m-3"></div>
   <script src="/scripts/displayhatcards.js"></script>
   <script src="/components/navbar.js"></script>

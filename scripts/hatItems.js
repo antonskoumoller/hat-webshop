@@ -12,6 +12,7 @@ function loadHats() {
         category: "Fun",
         popular: true,
         price: 500,
+        brand: "Gucci",
       },
       {
         id: 2,
@@ -23,6 +24,7 @@ function loadHats() {
         category: "Outdoor",
         popular: true,
         price: 500,
+        brand: "Gucci",
       },
       {
         id: 3,
@@ -34,6 +36,7 @@ function loadHats() {
         category: "Kids",
         popular: true,
         price: 500,
+        brand: "Gucci",
       },
       {
         id: 4,
@@ -46,6 +49,7 @@ function loadHats() {
         category: "Classic",
         popular: true,
         price: 500,
+        brand: "Gucci",
       },
       {
         id: 5,
@@ -58,6 +62,7 @@ function loadHats() {
         category: "Classic",
         popular: true,
         price: 500,
+        brand: "Gucci",
       },
       {
         id: 6,
@@ -70,6 +75,7 @@ function loadHats() {
         category: "Outdoor",
         popular: true,
         price: 500,
+        brand: "Gucci",
       },
       {
         id: 7,
@@ -81,6 +87,7 @@ function loadHats() {
         category: "Fun",
         popular: false,
         price: 500,
+        brand: "Prada",
       },
       {
         id: 8,
@@ -92,6 +99,7 @@ function loadHats() {
         category: "Fashion",
         popular: false,
         price: 99999,
+        brand: "Prada",
       },
       {
         id: 9,
@@ -103,6 +111,7 @@ function loadHats() {
         category: "Outdoor",
         popular: false,
         price: 1,
+        brand: "Prada",
       },
       {
         id: 10,
@@ -114,6 +123,7 @@ function loadHats() {
         category: "Fashion",
         popular: false,
         price: 149,
+        brand: "Prada",
       },
       {
         id: 11,
@@ -125,6 +135,7 @@ function loadHats() {
         category: "Fashion",
         popular: false,
         price: 250,
+        brand: "Prada",
       },
       {
         id: 12,
@@ -136,6 +147,7 @@ function loadHats() {
         category: "Fun",
         popular: false,
         price: 99,
+        brand: "Von Dutch",
       },
       {
         id: 13,
@@ -147,6 +159,7 @@ function loadHats() {
         category: "Classic",
         popular: false,
         price: 315,
+        brand: "Von Dutch",
       },
       {
         id: 14,
@@ -159,6 +172,7 @@ function loadHats() {
         category: "Outdoor",
         popular: false,
         price: 101,
+        brand: "Von Dutch",
       },
       {
         id: 15,
@@ -171,6 +185,7 @@ function loadHats() {
         category: "Outdoor",
         popular: false,
         price: 299,
+        brand: "Von Dutch",
       },
       {
         id: 16,
@@ -183,6 +198,7 @@ function loadHats() {
         category: "Fun",
         popular: false,
         price: 9,
+        brand: "Von Dutch",
       },
     ];
 
