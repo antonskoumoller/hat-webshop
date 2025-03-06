@@ -126,6 +126,64 @@ function loadHats() {
         popular: false,
         price: 250,
       },
+      {
+        id: 12,
+        name: "Cat hat",
+        img: "/images/hat-for-cat.jpg",
+        description: "If you have a cat, buy a hat for the cat",
+        fullDescription:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        category: "fun",
+        popular: false,
+        price: 99,
+      },
+      {
+        id: 13,
+        name: "Graduation hat",
+        img: "/images/graduation-hat.jpg",
+        description: "Show of your knowledge with this hat on your head",
+        fullDescription:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        category: "Classic",
+        popular: false,
+        price: 315,
+      },
+      {
+        id: 14,
+        name: "Bamboo hat",
+        img: "/images/bamboo-hat.jpg",
+        description:
+          "A hat made of bamboo. Perfect for the summer, or if you like bamboo, or both.",
+        fullDescription:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        category: "Outdoor",
+        popular: false,
+        price: 101,
+      },
+      {
+        id: 15,
+        name: "Windy hat",
+        img: "/images/windy-hat.jpg",
+        description:
+          "A hat that is perfect for windy days. It will not fly off your head. Probably, we have not tested it.",
+        fullDescription:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        category: "Outdoor",
+        popular: false,
+        price: 299,
+      },
+      {
+        id: 16,
+        name: "Chicken hat",
+        img: "/images/chick-hat.jpg",
+        description:
+          "A hat that looks like a chicken. Perfect for the chicken lover in your life. Or if you are a chicken. Or if you just like chickens. ",
+        fullDescription:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        category: "Fun",
+        popular: false,
+        price: 9,
+      },
     ];
 
     localStorage.setItem("allHats", JSON.stringify(allHats));
