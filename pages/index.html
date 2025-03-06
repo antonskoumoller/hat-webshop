@@ -13,15 +13,13 @@
   <script src="/scripts/LogInFunctionality.js"></script>
   <script src="/scripts/carousel.js"></script>
   <title>DripHats WebShop</title>
-
 </head>
 
 <body onload="loadHats(); checkIfLoggedIn(); getCarouselCards(3)">
-
   <div id="navbar"></div>
 
-  <script src="/components/navbar.js"></script>
 
+  <script src="/components/navbar.js"></script>
 
   <!-- all of caroussel put in container spanning 100 % width (bs4 basic construct) -->
   <!-- caroussel set to be 50 % width of parent container -->
@@ -34,10 +32,9 @@
         <li data-target="#popular-items-caroussel" data-slide-to="0" class="active"></li>
         <li data-target="#popular-items-caroussel" data-slide-to="1"></li>
       </ol>
-      <!-- Where the generated slides will be put -->
-      <div class="carousel-inner" id="slides">
 
-      </div>
+      <div class="carousel-inner" id="slides"></div>
+
       <!-- the controls for the caroussel -->
       <a class="carousel-control-prev" href="#popular-items-caroussel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
