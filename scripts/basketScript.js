@@ -93,7 +93,7 @@ function generateBasketCards() {
         <div class="container-basketItems row">
           <div class="hatAttributes col-md-8">
                 <img src="${item.hat.img}"></img>
-                <p>${item.hat.description}</p>
+                <p style=margin-top:12px;>${item.hat.description}</p>
           </div>
 
           <div class="priceAttributes col-md-4">

@@ -161,7 +161,9 @@ h1 {
     flex: 1;
     margin: 5px;
   }
-
+}
 img {
-  max-height: 50%;
+  max-height: 20rem;
+  object-fit: contain;
+  margin: 8px;
 }
