@@ -103,3 +103,17 @@ h1 {
 #popular-items-caroussel .carousel-item .card .btn {
   margin-top: auto; /* This ensures that the button stays at the bottom */
 }
+
+/* Hide radio next to filter buttons */
+
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.btn-check:checked + .btn {
+  background-color: var(--light-primary) !important;
+  color: white;
+  border-color: var(--light-primary) !important;
+}
+
