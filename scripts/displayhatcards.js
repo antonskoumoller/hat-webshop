@@ -6,6 +6,7 @@ let hatcards = hatList.map((hat) => {
   let cardSize = document.createElement("div");
   cardSize.className = "col-sm-6 mb-3";
   cardSize.className = "col-sm-6 mb-3";
+  cardSize.setAttribute("category", hat.category);
 
   // Creating the card div
   let hatCard = document.createElement("div");
@@ -62,3 +63,23 @@ hatcards.forEach((hatCard) => {
   container.appendChild(hatCard);
 });
 // }
+
+function filteredView(category) {
+  //let hatList = JSON.parse(localStorage.getItem("allHats"));
+  let container = document.getElementById("hat-container");
+  let containerChildren = container.children;
+
+  if (category == "allHats") {
+    for (let index = 0; index < containerChildren.length; index++) {
+      containerChildren[index].className = "col-sm-6 mb-3";
+    }
+  } else {
+    for (let index = 0; index < containerChildren.length; index++) {
+      if (containerChildren[index].getAttribute("category") == category) {
+        containerChildren[index].className = "col-sm-6 mb-3";
+      } else {
+        containerChildren[index].className = "d-none";
+      }
+    }
+  }
+}

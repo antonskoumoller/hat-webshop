@@ -103,6 +103,20 @@ h1 {
   margin-top: auto; /* This ensures that the button stays at the bottom */
 }
 
+
+/* Hide radio next to filter buttons */
+
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.btn-check:checked + .btn {
+  background-color: var(--light-primary) !important;
+  color: white;
+  border-color: var(--light-primary) !important;
+}
+
 /* styling for items in basket */
 .container-fluid {
   display: flex;
@@ -167,3 +181,4 @@ img {
   object-fit: contain;
   margin: 8px;
 }
+
