@@ -34,6 +34,7 @@
   width: 100%; /* Ensures images stretch to full card width */
   height: 250px; /* Set a fixed height */
   object-fit: contain;
+  margin: 0px;
 }
 
 .card {
