@@ -40,10 +40,17 @@ let hatcards = hatList.map((hat) => {
   link.className = "btn btn-outline-success";
   link.textContent = "Show hat";
 
+  let link2 = document.createElement("a");
+  link2.href = "#";
+  link2.setAttribute("onclick", `addToBasket(${hat.id});`);
+  link2.className = "btn btn-outline-success";
+  link2.textContent = "Add to cart";
+
   // Appending elements (title, description and link) to the card body
   hatBody.appendChild(title);
   hatBody.appendChild(description);
   hatBody.appendChild(link);
+  hatBody.appendChild(link2);
 
   // Appending image and card body to the card
   hatCard.appendChild(img);
