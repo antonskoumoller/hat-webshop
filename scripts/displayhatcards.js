@@ -63,7 +63,7 @@ let hatcards = hatList.map((hat) => {
 });
 
 let container = document.getElementById("hat-container");
-container.className = "row row-cols-1 row-cols-sm-2 row-cols-md-4";
+container.className = " row row-cols-1 row-cols-sm-2 row-cols-md-4 m-3";
 
 // Appending each cardSize div to the container
 hatcards.forEach((hatCard) => {
