@@ -24,14 +24,20 @@
 
     <div class="container-fluid">
       <h1>Items in your basket</h1>
-      <button
-        type="button"
-        class="btn btn-primary"
-        onClick="resetBasket(); location.reload();"
-      >
-        Remove all items from basket
-      </button>
       <div id="basket-container"></div>
+      <div id="button-div">
+        <button
+          id="button1"
+          type="button"
+          class="btn btn-outline-success"
+          onClick="resetBasket(); location.reload();"
+        >
+          Remove all items from basket
+        </button>
+        <button id="button2" type="button" class="btn btn-outline-success">
+          BUY
+        </button>
+      </div>
     </div>
     <script src="/components/navbar.js"></script>
   </body>
