@@ -32,6 +32,7 @@ function getCarouselCards(itemsPerSlide) {
                           <h5 class="card-title">${carousselHats[j].name}</h5>
                           <p class="card-text">${carousselHats[j].description}</p>
                           <a class="btn btn-outline-success" href="/pages/product-page.html?id=${carousselHats[j].id}">Show hat<a/>
+                          <a class="btn btn-outline-success" onclick="addToBasket(${carousselHats[j].id});">Add to cart<a/>
                       </div>
                   </div>
               `;
