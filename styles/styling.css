@@ -82,6 +82,27 @@ h1 {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
   color: var(--dark-primary) !important;
 }
+.container {
+  border-color: var(--dark-primary) !important;
+  border-radius: 5px;
+}
+/*Just used for the only caroussel container for now*/
+#carousel1 {
+  border-color: var(--dark-primary) !important;
+  border-radius: 5px;
+}
+
+/* Set a fixed height for all cards inside the carousel */
+#popular-items-caroussel .carousel-item .card {
+  height: 500px; /* Adjust to your desired height */
+  display: flex;
+  flex-direction: column; /* Ensure contents inside the card are arranged vertically */
+}
+
+/* Push the button to the bottom of the card */
+#popular-items-caroussel .carousel-item .card .btn {
+  margin-top: auto; /* This ensures that the button stays at the bottom */
+}
 
 img {
   max-height: 50%;
