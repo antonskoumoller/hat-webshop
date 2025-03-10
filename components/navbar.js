@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Insert the entire navbar into the #navbar div
   document.getElementById("navbar").innerHTML = `
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/pages/index.html">
                 <img src="/images/drippin-hats-logo.png" width="50" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
