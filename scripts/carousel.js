@@ -31,8 +31,8 @@ function getCarouselCards(itemsPerSlide) {
                       <div class="card-body">
                           <h5 class="card-title">${carousselHats[j].name}</h5>
                           <p class="card-text">${carousselHats[j].description}</p>
-                          <a class="btn btn-outline-success" href="/pages/product-page.html?id=${carousselHats[j].id}">Show hat<a/>
-                          <a class="btn btn-outline-success" onclick="addToBasket(${carousselHats[j].id});">Add to cart<a/>
+                          <a class="btn btn-outline-success mt-auto" href="/pages/product-page.html?id=${carousselHats[j].id}">Show hat<a/>
+                          <a class="btn btn-outline-success mt-3 mx-0" onclick="addToBasket(${carousselHats[j].id});">Add to cart<a/>
                       </div>
                   </div>
               `;

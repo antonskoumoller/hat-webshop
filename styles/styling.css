@@ -33,7 +33,6 @@
 .card-img-top {
   width: 100%; /* Ensures images stretch to full card width */
   height: 250px; /* Set a fixed height */
-  object-fit: contain;
   margin: 0px;
 }
 
@@ -44,7 +43,6 @@
 }
 
 .card-body {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
@@ -81,10 +79,7 @@ h1 {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
   color: var(--dark-primary) !important;
 }
-.container {
-  border-color: var(--dark-primary) !important;
-  border-radius: 5px;
-}
+
 /*Just used for the only caroussel container for now*/
 #carousel1 {
   border-color: var(--dark-primary) !important;
@@ -92,16 +87,11 @@ h1 {
 }
 
 /* Set a fixed height for all cards inside the carousel */
-#popular-items-caroussel .carousel-item .card {
-  height: 500px; /* Adjust to your desired height */
-  display: flex;
-  flex-direction: column; /* Ensure contents inside the card are arranged vertically */
-}
+ #popular-items-caroussel .carousel-item .card {
+  height: 500px; 
+ } 
 
-/* Push the button to the bottom of the card */
-#popular-items-caroussel .carousel-item .card .btn {
-  margin-top: auto; /* This ensures that the button stays at the bottom */
-}
+
 
 /* Hide radio next to filter buttons */
 

@@ -47,11 +47,9 @@ function createHatCards() {
     // Creating "Add to cart" button
     let addButton = document.createElement("button");
     addButton.type = "button";
-    addButton.className = "btn btn-outline-success";
+    addButton.className = "btn btn-outline-success mt-3 mx-0";
     addButton.textContent = "Add to cart";
     addButton.setAttribute("onclick", `addToBasket(${hat.id});`);
-    addButton.style.margin = "0";
-    addButton.style.marginTop = "10px";
 
     // Appending elements (title, description and link) to cardBody
     cardBody.appendChild(title);
