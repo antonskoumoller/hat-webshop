@@ -22,17 +22,16 @@
 
 <body class="content" onload="checkIfLoggedIn();loadHats();">
 
-    <!-- Add   -->
+    
     <div id="navbar"></div>
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-4 d-flex justify-content-center">
-                <img id="productImage" class="img-fluid border shadow " src="" alt="Product Image">
+    <div class="container mt-5 mb-3 border rounded p-4 shadow h-100">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <img id="productImage" src="" alt="Product Image">
             </div>
 
             <div class="col-md-6">
-                <div class="border rounded p-4 bg-light shadow h-100 d-flex flex-column">
                     <h2 id="productName" class="font-weight-bold">
                     </h2>
                     <p id="productDescription"></p>
@@ -47,7 +46,6 @@
                         onclick="addToBasket(new URLSearchParams(window.location.search).get('id'))">
                         Add to Cart
                     </button>
-                </div>
             </div>
         </div>
     </div>

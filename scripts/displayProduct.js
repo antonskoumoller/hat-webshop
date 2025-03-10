@@ -16,7 +16,7 @@ function displayProduct(id) {
     document.getElementById("productImage").src = myHat.img;
     document.getElementById("productName").textContent = myHat.name;
     document.getElementById("productCategory").textContent = `Category: ${myHat.category}`;
-    document.getElementById("productDescription").textContent = myHat.description;
+    document.getElementById("productDescription").textContent = myHat.fullDescription;
     document.getElementById("productPrice").textContent = `Price: ${myHat.price} $`;
 
 }
