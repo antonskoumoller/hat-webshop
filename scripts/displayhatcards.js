@@ -41,7 +41,7 @@ function createHatCards() {
     // Creating "Show hat" link
     let link = document.createElement("a");
     link.href = `/pages/product-page.html?id=${hat.id}`;
-    link.className = "btn btn-outline-success";
+    link.className = "btn btn-outline-success mt-auto";
     link.textContent = "Show hat";
 
     // Creating "Add to cart" button
