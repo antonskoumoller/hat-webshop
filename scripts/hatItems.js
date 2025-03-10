@@ -16,7 +16,7 @@ function loadHats() {
       },
       {
         id: 2,
-        name: "Kaptajn",
+        name: "Captain",
         img: "/images/Kaptajn.jpg",
         description: "Traditional headpiece for the born sailor",
         fullDescription:
