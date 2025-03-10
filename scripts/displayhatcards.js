@@ -44,18 +44,20 @@ function createHatCards() {
     link.className = "btn btn-outline-success";
     link.textContent = "Show hat";
 
-    // Creating "Add to cart" link
-    let link2 = document.createElement("a");
-    link2.href = "#";
-    link2.setAttribute("onclick", `addToBasket(${hat.id});`);
-    link2.className = "btn btn-outline-success";
-    link2.textContent = "Add to cart";
+    // Creating "Add to cart" button
+    let addButton = document.createElement("button");
+    addButton.type = "button";
+    addButton.className = "btn btn-outline-success";
+    addButton.textContent = "Add to cart";
+    addButton.setAttribute("onclick", `addToBasket(${hat.id});`);
+    addButton.style.margin = "0";
+    addButton.style.marginTop = "10px";
 
     // Appending elements (title, description and link) to cardBody
     cardBody.appendChild(title);
     cardBody.appendChild(description);
     cardBody.appendChild(link);
-    cardBody.appendChild(link2);
+    cardBody.appendChild(addButton);
 
     // Appending image cardBody to the card
     card.appendChild(img);
