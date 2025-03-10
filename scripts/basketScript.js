@@ -50,6 +50,7 @@ function addToBasket(hatIDExp) {
 
   // Sets basket in localstorage to new basket with added hat-item
   setBasket(localBasket);
+  generateBasketCards();
 }
 
 function removeFromBasket(hatIDExp) {
